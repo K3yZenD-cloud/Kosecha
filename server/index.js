@@ -6,6 +6,26 @@ const session = require("express-session");
 const helmet = require("helmet");
 const rateLimit = require("express-rate-limit");
 
+// Valida las variables de entorno obligatorias ANTES de cargar las rutas (que crean
+// el cliente de Supabase al importarse). Así el error es un mensaje claro y no un
+// stack trace dentro de node_modules.
+const REQUIRED_ENV_VARS = [
+  "SUPABASE_URL",
+  "SUPABASE_ANON_KEY",
+  "SUPABASE_SERVICE_ROLE_KEY",
+  "ADMIN_USERNAME",
+  "ADMIN_PASSWORD_HASH",
+];
+const missingEnvVars = REQUIRED_ENV_VARS.filter((key) => !process.env[key]);
+if (missingEnvVars.length > 0) {
+  console.error(
+    `Faltan variables de entorno obligatorias: ${missingEnvVars.join(", ")}.\n` +
+      "Configúralas en el panel de tu hosting (en Render: Environment → Add Environment Variable) " +
+      "o en tu archivo .env si corres el proyecto en local."
+  );
+  process.exit(1);
+}
+
 const authRoutes = require("./routes/auth");
 const catalogRoutes = require("./routes/catalog-supabase");
 const { requireAuthPage } = require("./middleware/requireAuth");
