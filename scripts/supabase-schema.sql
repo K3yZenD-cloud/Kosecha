@@ -58,6 +58,7 @@ alter table public.products add column if not exists wholesale_price text;
 alter table public.products add column if not exists variants jsonb not null default '[]'::jsonb;
 
 insert into public.catalog_meta (id, business_name, tagline, footer_note, contact)
+overriding system value
 values (1, 'Kosecha', 'Del campo a tu mesa', 'Hecho a mano, con cariño y de temporada.', 'contacto@kosecha.cl · Santiago, Chile')
 on conflict (id) do nothing;
 
