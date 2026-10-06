@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kosecha · Catálogo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <div class="top-bar"></div>
+
+  <header class="header">
+    <div class="header__inner">
+      <div class="logo" id="logo-container">
+        <span id="logo-fallback">K</span>
+        <img id="logo-img" alt="Logo" hidden />
+      </div>
+      <div>
+        <h1 class="brand" id="business-name">Kosecha</h1>
+        <p class="tagline" id="tagline">Del campo a tu mesa</p>
+      </div>
+    </div>
+    <svg class="wave" viewBox="0 0 400 18" preserveAspectRatio="none">
+      <path d="M0,9 Q10,0 20,9 T40,9 T60,9 T80,9 T100,9 T120,9 T140,9 T160,9 T180,9 T200,9 T220,9 T240,9 T260,9 T280,9 T300,9 T320,9 T340,9 T360,9 T380,9 T400,9 V18 H0 Z" />
+    </svg>
+  </header>
+
+  <div class="catalog-toolbar" id="catalog-toolbar">
+    <div class="catalog-toolbar__top">
+      <label class="search-box" for="search-input">
+        <svg class="search-box__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+        <input
+          type="search"
+          id="search-input"
+          class="search-box__input"
+          placeholder="Buscar producto…"
+          autocomplete="off"
+          aria-label="Buscar producto"
+        />
+        <button type="button" class="search-box__clear" id="search-clear" aria-label="Limpiar búsqueda" hidden>&times;</button>
+      </label>
+      <p class="catalog-summary" id="catalog-summary"></p>
+    </div>
+    <nav class="catalog-nav" id="catalog-nav" aria-label="Secciones del catálogo"></nav>
+  </div>
+
+  <main class="catalog" id="catalog">
+    <p class="loading">Cargando catálogo…</p>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__brand" id="footer-business-name">Kosecha</p>
+    <p class="footer__note" id="footer-note">Hecho a mano, con cariño y de temporada.</p>
+    <p class="footer__contact" id="footer-contact">contacto@kosecha.cl</p>
+  </footer>
+
+  <button type="button" class="back-to-top" id="back-to-top" aria-label="Volver arriba" hidden>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="/js/catalog.js"></script>
+</body>
+</html>

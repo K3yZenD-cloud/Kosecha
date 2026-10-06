@@ -1,0 +1,27 @@
+{
+  "name": "kosecha-catalogo",
+  "version": "1.0.0",
+  "description": "Catalogo web de una sola pantalla para Kosecha, con panel administrador separado y protegido por credencial.",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js",
+    "generar-hash": "node scripts/generar-hash-password.js",
+    "generar-secret": "node scripts/generar-session-secret.js",
+    "setup:supabase": "node scripts/setup-supabase.js"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.112.4",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^8.7.1",
+    "express-session": "^1.18.0",
+    "helmet": "^8.3.0",
+    "multer": "^2.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

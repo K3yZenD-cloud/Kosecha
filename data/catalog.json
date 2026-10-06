@@ -1,0 +1,35 @@
+{
+  "businessName": "Kosecha",
+  "tagline": "Del campo a tu mesa",
+  "footerNote": "Hecho a mano, con cariño y de temporada.",
+  "contact": "contacto@kosecha.cl · Santiago, Chile",
+  "logo": null,
+  "sections": [
+    {
+      "id": "sec-frutas",
+      "name": "Frutas",
+      "products": [
+        { "id": "prod-1", "name": "Paltas Hass", "weight": "1 kg", "price": 3200, "image": null },
+        { "id": "prod-2", "name": "Naranjas de jugo", "weight": "1 kg", "price": 1500, "image": null },
+        { "id": "prod-3", "name": "Plátanos", "weight": "1 kg", "price": 1200, "image": null }
+      ]
+    },
+    {
+      "id": "sec-verduras",
+      "name": "Verduras",
+      "products": [
+        { "id": "prod-4", "name": "Tomates de rama", "weight": "1 kg", "price": 1800, "image": null },
+        { "id": "prod-5", "name": "Zapallo camote", "weight": "1 unidad", "price": 2500, "image": null },
+        { "id": "prod-6", "name": "Zanahorias", "weight": "1 kg", "price": 900, "image": null }
+      ]
+    },
+    {
+      "id": "sec-despensa",
+      "name": "Despensa",
+      "products": [
+        { "id": "prod-7", "name": "Miel Kosecha", "weight": "500 g", "price": 4500, "image": null },
+        { "id": "prod-8", "name": "Nueces", "weight": "250 g", "price": 2900, "image": null }
+      ]
+    }
+  ]
+}
